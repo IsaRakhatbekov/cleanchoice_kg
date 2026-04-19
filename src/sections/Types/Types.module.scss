@@ -1,0 +1,138 @@
+.Types {
+	padding: 100px 0;
+	.title {
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 83%;
+		letter-spacing: -0.02em;
+		text-align: center;
+		color: #0f172b;
+		margin-bottom: 50px;
+	}
+
+	.list {
+		display: grid;
+		// grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		gap: 15px;
+	}
+
+	.item {
+		padding: 20px;
+		border-radius: 20px;
+		border: 1px solid #e4e4e4;
+		position: relative;
+		overflow: hidden;
+
+		&:nth-child(1) {
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 263px;
+				height: 263px;
+				background: url('../../../public/Types1.png') no-repeat center/cover;
+				z-index: -1;
+			}
+
+			& .iconWrapper {
+				background-color: #eff6ff;
+				border: 1.02px solid #bedbff;
+			}
+		}
+
+		&:nth-child(2) {
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 263px;
+				height: 263px;
+				background: url('../../../public/Types2.png') no-repeat center/cover;
+				z-index: -1;
+			}
+			& .iconWrapper {
+				background-color: #ffedd4;
+				border: 1.02px solid #ffd6a8;
+			}
+		}
+
+		&:nth-child(3) {
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 263px;
+				height: 263px;
+				background: url('../../../public/Types3.png') no-repeat center/cover;
+				z-index: -1;
+			}
+			& .iconWrapper {
+				background-color: #ecfeff;
+				border: 1.02px solid #a2f4fd;
+			}
+		}
+	}
+
+	.iconWrapper {
+		margin-top: 150px;
+		width: 55px;
+		height: 55px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 15px;
+		margin-bottom: 15px;
+	}
+
+	.innerTitle {
+		font-family: var(--font-family);
+		font-weight: 600;
+		font-size: 30px;
+		line-height: 127%;
+		color: #181d27;
+		margin-bottom: 15px;
+	}
+
+	.subtitle {
+		font-family: var(--font-family);
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 150%;
+		color: #181d27;
+		margin-bottom: 35px;
+	}
+
+	.checkTitle {
+		font-family: var(--font-family);
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 156%;
+		color: #000;
+		margin-bottom: 12px;
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		flex-shrink: 1;
+	}
+
+	.checkIcon {
+		width: 24px;
+		height: 24px;
+		flex-shrink: 0;
+		overflow: hidden;
+	}
+
+	.checkText {
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 150%;
+		color: #535862;
+		margin-bottom: 30px;
+	}
+}

@@ -3,6 +3,7 @@ import AboutHeatPump from '../sections/AboutHeatPump/AboutHeatPump'
 import Benefits from '../sections/Benefits/Benefits'
 import HeatPumpProcess from '../sections/HeatPumpProcess/HeatPumpProcess'
 import Hero from '../sections/Hero/Hero'
+import Types from '../sections/Types/Types'
 
 export default function Home() {
 	return (
@@ -13,6 +14,7 @@ export default function Home() {
 				<Benefits />
 				<AboutHeatPump />
 				<HeatPumpProcess />
+				<Types />
 			</main>
 		</div>
 	)
