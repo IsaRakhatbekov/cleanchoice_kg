@@ -1,0 +1,88 @@
+.Diagnostics {
+	padding: 100px 0;
+	background: url('../../../public/Diagnostics-bg.png') no-repeat center/cover;
+
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 75px;
+	}
+
+	.leftSide {
+		border-radius: 20px;
+		padding: 42px 30px;
+		width: 100%;
+		max-width: 625px;
+		background: var(--belvy);
+	}
+
+	.title {
+		font-family: var(--font-family);
+		font-weight: 600;
+		font-size: 36px;
+		line-height: 122%;
+		letter-spacing: -0.02em;
+		color: #000;
+		margin-bottom: 20px;
+	}
+
+	.subtitle {
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 150%;
+		color: #000;
+		margin-bottom: 20px;
+	}
+
+	.text {
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 150%;
+		color: #000;
+		margin-bottom: 12px;
+	}
+
+	.rightSide {
+		border-radius: 32px;
+		width: 100%;
+		max-width: 512px;
+		background: var(--main);
+		text-align: center;
+		padding: 70px 20px;
+	}
+
+	.rightSideTitle {
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 133%;
+		text-align: center;
+		color: var(--belvy);
+		margin-bottom: 10px;
+	}
+
+	.rightSideText {
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 133%;
+		text-align: center;
+		color: var(--belvy);
+		margin-bottom: 20px;
+	}
+
+	.btn {
+		padding: 15px 10px;
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 150%;
+		text-align: center;
+		color: #007a55;
+		border-radius: 14px;
+		background-color: var(--belvy);
+	}
+}
