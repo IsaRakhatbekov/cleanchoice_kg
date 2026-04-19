@@ -1,0 +1,30 @@
+@use './fonts-local.scss';
+
+:root {
+	/* Цвета из макета */
+	--main: #6e8322;
+	--belvy: #fff;
+
+	/*
+	 * Шрифты из макета (те же имена переменных).
+	 * Inter и Arimo подключены через next/font — переменные --font-inter / --font-arimo задаются классом на <html>.
+	 */
+	--font-family: var(--font-inter), 'Inter', sans-serif;
+	--second-family: 'Adderley', sans-serif;
+	--third-family: var(--font-arimo), 'Arimo', sans-serif;
+	--font3: 'Involve', sans-serif;
+}
+
+body {
+	min-height: 100dvh;
+	font-family: var(--font-family);
+	font-optical-sizing: auto;
+	color: inherit;
+	background-color: inherit;
+}
+
+.container {
+	max-width: 1255px;
+	margin: 0 auto;
+	padding: 0 15px;
+}

@@ -1,0 +1,20 @@
+/**
+ * Adderley и Involve не на Google Fonts — подключение через локальные файлы в public/fonts/.
+ * После добавления файлов сборка начнёт отдавать шрифты без дополнительных правок в коде.
+ */
+
+@font-face {
+	font-family: Adderley;
+	src: url('/fonts/Adderley-Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Involve;
+	src: url('/fonts/Involve-Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}

@@ -2,4 +2,125 @@
 	height: 100dvh;
 	width: 100%;
 	background: url('../../../public/hero-bg.png') no-repeat center/cover;
+	overflow: hidden;
+
+	.container {
+		position: relative;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		/* Ширина для расчёта cqi / cqw у .bigText */
+		container-type: inline-size;
+		container-name: hero;
+	}
+
+	.wrapper {
+		max-width: 766px;
+	}
+
+	.title {
+		font-family: var(--font3);
+		font-weight: 700;
+		font-size: 48px;
+		line-height: 117%;
+		text-transform: uppercase;
+		color: var(--belvy);
+		margin-bottom: 20px;
+	}
+
+	.subtitle {
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: 18px;
+		color: var(--belvy);
+		margin-bottom: 20px;
+	}
+
+	.btnWrapper {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+
+	.whitBtnIcon {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		flex-shrink: 0;
+		& svg {
+			flex-shrink: 0;
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	.btnWhite {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		flex-shrink: 1;
+		padding: 12px 20px;
+		border: 1px solid #d5d7da;
+		border-radius: 8px;
+		padding: 12px 18px;
+		box-shadow:
+			0 1px 2px 0 rgba(10, 13, 18, 0.05),
+			inset 0 -2px 0 0 rgba(10, 13, 18, 0.05),
+			inset 0 0 0 1px rgba(10, 13, 18, 0.18);
+		background: #fff;
+
+		font-family: var(--font-family);
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 150%;
+		color: #414651;
+	}
+
+	.btnGreen {
+		font-family: var(--font-family);
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 150%;
+		color: var(--belvy);
+
+		border-radius: 8px;
+		padding: 12px 18px;
+
+		box-shadow:
+			0 1px 2px 0 rgba(10, 13, 18, 0.05),
+			inset 0 -2px 0 0 rgba(10, 13, 18, 0.05),
+			inset 0 0 0 1px rgba(10, 13, 18, 0.18);
+		background: var(--main);
+	}
+
+	.bigText {
+		font-family: var(--second-family);
+		font-weight: 700;
+		/*
+		 * Масштаб от ширины .container: 100cqi = 100% ширины контейнера.
+		 * Делитель подбирается под строку «ECOHEAT» и жирный caps (~7 знаков).
+		 * Если после подключения Adderley ширина чуть уедет — поправь только делитель.
+		 */
+		font-size: clamp(3rem, calc(100cqi / 4.65), 32rem);
+		line-height: 133%;
+		background: linear-gradient(
+			180deg,
+			#404040 25.48%,
+			rgba(64, 64, 64, 0) 65.38%
+		);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+
+		display: block;
+		width: 100%;
+		white-space: nowrap;
+
+		position: absolute;
+		right: 0;
+		bottom: -80px;
+		left: 0;
+		text-align: left;
+	}
 }
