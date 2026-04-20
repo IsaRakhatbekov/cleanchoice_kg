@@ -1,0 +1,74 @@
+.FAQ {
+	padding: 100px 0;
+
+	.title {
+		font-family: var(--font-family);
+		font-weight: 600;
+		font-size: 36px;
+		line-height: 122%;
+		letter-spacing: -0.02em;
+		color: #181d27;
+		margin-bottom: 65px;
+	}
+
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+		gap: 24px;
+	}
+
+	.list {
+		width: 100%;
+		max-width: 560px;
+	}
+
+	.item {
+		display: flex;
+		align-items: flex-start;
+		gap: 15px;
+		margin-bottom: 40px;
+	}
+
+	.innerTitle {
+		font-family: var(--font-family);
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 156%;
+		color: #181d27;
+		margin-bottom: 5px;
+	}
+
+	.text {
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 150%;
+		color: #535862;
+	}
+
+	.iconWrapper {
+		border: 1px solid #d5d7da;
+		border-radius: 10px;
+		width: 48px;
+		height: 48px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+	}
+
+	.imgWrapper {
+		position: relative;
+		flex: 1;
+		max-width: 592px;
+		min-height: 100%;
+		border-radius: 20px;
+
+		overflow: auto;
+	}
+
+	.image {
+		object-fit: cover;
+	}
+}
