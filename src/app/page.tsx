@@ -1,6 +1,7 @@
 import Statistics from '@/src/sections/Statistics/Statistics'
 import AboutHeatPump from '../sections/AboutHeatPump/AboutHeatPump'
 import Benefits from '../sections/Benefits/Benefits'
+import Consultation from '../sections/Consultation/Consultation'
 import Diagnostics from '../sections/Diagnostics/Diagnostics'
 import FAQ from '../sections/FAQ/FAQ'
 import HeatPumpProcess from '../sections/HeatPumpProcess/HeatPumpProcess'
@@ -21,6 +22,7 @@ export default function Home() {
 				<Diagnostics />
 				<HowItWorks />
 				<FAQ />
+				<Consultation />
 			</main>
 		</div>
 	)

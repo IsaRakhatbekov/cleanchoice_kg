@@ -1,0 +1,93 @@
+.Consultation {
+	padding: 100px 0;
+	.title {
+		font-family: var(--font-family);
+		font-weight: 600;
+		font-size: 36px;
+		line-height: 122%;
+		letter-spacing: -0.02em;
+		text-align: center;
+		color: #181d27;
+		margin-bottom: 20px;
+	}
+
+	.subtitle {
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 150%;
+		text-align: center;
+		color: #535862;
+		margin-bottom: 45px;
+	}
+
+	.form {
+		width: 100%;
+		max-width: 480px;
+		margin: 0 auto;
+	}
+
+	.lbl {
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 143%;
+		color: #414651;
+	}
+
+	.wrapper {
+		margin-bottom: 35px;
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	.inp {
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 150%;
+		color: #717680;
+		padding: 10px 15px;
+		box-shadow: 0 1px 2px 0 rgba(10, 13, 18, 0.05);
+		background: #fff;
+		border: 1px solid #d5d7da;
+		border-radius: 8px;
+
+		&::placeholder {
+			font-family: var(--font-family);
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 150%;
+			color: #717680;
+		}
+	}
+
+	.textarea {
+		resize: none;
+		height: 134px;
+	}
+
+	.checkboxWrapper {
+		display: flex;
+		align-items: flex-start;
+		gap: 15px;
+		margin-bottom: 35px;
+	}
+
+	.btn {
+		width: 100%;
+		padding: 15px 20px;
+		box-shadow:
+			0 1px 2px 0 rgba(10, 13, 18, 0.05),
+			inset 0 -2px 0 0 rgba(10, 13, 18, 0.05),
+			inset 0 0 0 1px rgba(10, 13, 18, 0.18);
+		background: var(--main);
+		font-family: var(--font-family);
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 150%;
+		color: var(--belvy);
+		border-radius: 8px;
+	}
+}
