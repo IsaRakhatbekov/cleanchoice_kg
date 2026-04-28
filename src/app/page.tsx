@@ -4,6 +4,7 @@ import Benefits from '../sections/Benefits/Benefits'
 import Contractor from '../sections/Contractor/Contractor'
 import Diagnostics from '../sections/Diagnostics/Diagnostics'
 import FAQ from '../sections/FAQ/FAQ'
+import Footer from '../sections/Footer/Footer'
 import HeatPumpProcess from '../sections/HeatPumpProcess/HeatPumpProcess'
 import Hero from '../sections/Hero/Hero'
 import Partners from '../sections/Partners/Partners'
@@ -24,6 +25,7 @@ export default function Home() {
 				<FAQ />
 				<Partners />
 			</main>
+			<Footer />
 		</div>
 	)
 }
