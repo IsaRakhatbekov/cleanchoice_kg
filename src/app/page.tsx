@@ -1,12 +1,11 @@
 import Statistics from '@/src/sections/Statistics/Statistics'
 import AboutHeatPump from '../sections/AboutHeatPump/AboutHeatPump'
 import Benefits from '../sections/Benefits/Benefits'
-import Consultation from '../sections/Consultation/Consultation'
+import Contractor from '../sections/Contractor/Contractor'
 import Diagnostics from '../sections/Diagnostics/Diagnostics'
 import FAQ from '../sections/FAQ/FAQ'
 import HeatPumpProcess from '../sections/HeatPumpProcess/HeatPumpProcess'
 import Hero from '../sections/Hero/Hero'
-import HowItWorks from '../sections/HowItWorks/HowItWorks'
 import Types from '../sections/Types/Types'
 
 export default function Home() {
@@ -20,9 +19,8 @@ export default function Home() {
 				<HeatPumpProcess />
 				<Types />
 				<Diagnostics />
-				<HowItWorks />
+				<Contractor />
 				<FAQ />
-				<Consultation />
 			</main>
 		</div>
 	)

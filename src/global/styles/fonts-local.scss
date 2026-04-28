@@ -1,20 +1,22 @@
 /**
- * Adderley и Involve не на Google Fonts — подключение через локальные файлы в public/fonts/.
- * После добавления файлов сборка начнёт отдавать шрифты без дополнительных правок в коде.
+ * Локальные шрифты из public/fonts.
+ * Сейчас в проект добавлен только Involve-Regular.woff2.
+ * Если позже появится Adderley, добавьте отдельный @font-face ниже.
  */
 
 @font-face {
-	font-family: Adderley;
-	src: url('/fonts/Adderley-Bold.woff2') format('woff2');
-	font-weight: 700;
+	font-family: 'Involve';
+	src: url('/fonts/Involve-Regular.woff2') format('woff2');
+	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
 
+/* Временный alias для переменной --second-family, пока файл Adderley не добавлен */
 @font-face {
-	font-family: Involve;
-	src: url('/fonts/Involve-Bold.woff2') format('woff2');
-	font-weight: 700;
+	font-family: 'Adderley';
+	src: url('/fonts/Involve-Regular.woff2') format('woff2');
+	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
