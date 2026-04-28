@@ -6,6 +6,7 @@ import Diagnostics from '../sections/Diagnostics/Diagnostics'
 import FAQ from '../sections/FAQ/FAQ'
 import HeatPumpProcess from '../sections/HeatPumpProcess/HeatPumpProcess'
 import Hero from '../sections/Hero/Hero'
+import Partners from '../sections/Partners/Partners'
 import Types from '../sections/Types/Types'
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
 				<Diagnostics />
 				<Contractor />
 				<FAQ />
+				<Partners />
 			</main>
 		</div>
 	)
