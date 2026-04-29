@@ -248,13 +248,8 @@
 		max-width: 1216px;
 		padding: 65px;
 		background: #fafafa;
-	}
-
-	.collaborationWrapper {
-		gap: 20px;
 		display: flex;
-		align-items: center;
-		justify-content: space-between;
+		align-items: flex-start;
 	}
 
 	.collaborationEmailBtn {
@@ -265,7 +260,7 @@
 		gap: 10px;
 		border-radius: 10px;
 		background: var(--main);
-		padding: 15px 65px;
+		padding: 8px 65px;
 		font-family: var(--font-family);
 		font-weight: 500;
 		font-size: 20px;

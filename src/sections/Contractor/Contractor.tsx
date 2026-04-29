@@ -211,7 +211,7 @@ const Contractor = () => {
 
 	const pages = useMemo(
 		() => Array.from({ length: totalPages }, (_, index) => index + 1),
-		[totalPages]
+		[totalPages],
 	)
 
 	return (
@@ -317,21 +317,21 @@ const Contractor = () => {
 				<div className={styles.collaboration}>
 					<div className={styles.collaborationWrapper}>
 						<h2 className={styles.collaborationTitle}>Сотрудничество</h2>
-						<a
-							className={styles.collaborationEmailBtn}
-							href='mailto:mavlyanov@yandex.com'
-						>
-							<span className={styles.btnIcon}>
-								<MailIcon color='white' />
-							</span>
-							Связаться
-						</a>
+						<p className={styles.collaborationText}>
+							Если вы представляете компанию, предлагающую тепловые насосы или
+							сопутствующие услуги, приглашаем к сотрудничеству — свяжитесь с
+							нами по электронной почте: <span>mavlyanov@yandex.com</span>
+						</p>
 					</div>
-					<p className={styles.collaborationText}>
-						Если вы представляете компанию, предлагающую тепловые насосы или
-						сопутствующие услуги, приглашаем к сотрудничеству — свяжитесь с нами
-						по электронной почте: <span>mavlyanov@yandex.com</span>
-					</p>
+					<a
+						className={styles.collaborationEmailBtn}
+						href='mailto:mavlyanov@yandex.com'
+					>
+						<span className={styles.btnIcon}>
+							<MailIcon color='white' />
+						</span>
+						Связаться
+					</a>
 				</div>
 			</div>
 		</div>

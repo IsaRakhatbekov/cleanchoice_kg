@@ -245,14 +245,22 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	width: 24px;
-	height: 24px;
-	border-radius: 999px;
-	background: #eef1f4;
-	color: #64748b;
+	width: 36px;
+	height: 36px;
+	border-radius: 10px;
+
+	background: #f1f5f9;
+
 	font-size: 14px;
 	line-height: 1;
 	flex-shrink: 0;
+	color: #62748e;
+}
+
+.optionLeadingIcon svg {
+	width: 20px;
+	height: 20px;
+	display: block;
 }
 
 .optionCheck {
@@ -260,13 +268,13 @@
 }
 
 .optionButtonActive {
-	border-color: #6f861f;
+	background: var(--main);
 	background: #f2f7e4;
 }
 
 .optionButtonActive .optionLeadingIcon {
-	background: #e7f0ce;
-	color: #6e8322;
+	background: var(--main);
+	color: #fff;
 }
 
 .quizActions {
