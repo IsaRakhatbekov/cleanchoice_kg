@@ -1,5 +1,6 @@
 import Header from '../sections/Header/Header'
 import Hero from '../sections/Hero/Hero'
+import Statistics from '../sections/Statistics/Statistics'
 
 export default function Home() {
 	return (
@@ -7,7 +8,7 @@ export default function Home() {
 			<Header />
 			<main>
 				<Hero />
-				{/* <Statistics /> */}
+				<Statistics />
 				{/* <Benefits /> */}
 				{/* <AboutHeatPump /> */}
 				{/* <HeatPumpProcess /> */}
