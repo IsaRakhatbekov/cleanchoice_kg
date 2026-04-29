@@ -38,7 +38,7 @@ const Hero = () => {
 							</span>
 							Как это работает
 						</button>
-						<button className={styles.btnGreen}>Подобрать решение</button>
+						<button className={styles.btnOrange}>Подобрать решение</button>
 					</div>
 				</div>
 

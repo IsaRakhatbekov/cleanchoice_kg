@@ -1,31 +1,23 @@
-import Statistics from '@/src/sections/Statistics/Statistics'
-import AboutHeatPump from '../sections/AboutHeatPump/AboutHeatPump'
-import Benefits from '../sections/Benefits/Benefits'
-import Contractor from '../sections/Contractor/Contractor'
-import Diagnostics from '../sections/Diagnostics/Diagnostics'
-import FAQ from '../sections/FAQ/FAQ'
-import Footer from '../sections/Footer/Footer'
-import HeatPumpProcess from '../sections/HeatPumpProcess/HeatPumpProcess'
+import Header from '../sections/Header/Header'
 import Hero from '../sections/Hero/Hero'
-import Partners from '../sections/Partners/Partners'
-import Types from '../sections/Types/Types'
 
 export default function Home() {
 	return (
 		<div>
+			<Header />
 			<main>
 				<Hero />
-				<Statistics />
-				<Benefits />
-				<AboutHeatPump />
-				<HeatPumpProcess />
-				<Types />
-				<Diagnostics />
-				<Contractor />
-				<FAQ />
-				<Partners />
+				{/* <Statistics /> */}
+				{/* <Benefits /> */}
+				{/* <AboutHeatPump /> */}
+				{/* <HeatPumpProcess /> */}
+				{/* <Types /> */}
+				{/* <Diagnostics /> */}
+				{/* <Contractor /> */}
+				{/* <FAQ /> */}
+				{/* <Partners /> */}
 			</main>
-			<Footer />
+			{/* <Footer /> */}
 		</div>
 	)
 }

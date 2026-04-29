@@ -77,13 +77,12 @@
 		color: #414651;
 	}
 
-	.btnGreen {
+	.btnOrange {
 		font-family: var(--font-family);
 		font-weight: 600;
 		font-size: 16px;
 		line-height: 150%;
-		color: var(--belvy);
-
+		color: #000;
 		border-radius: 8px;
 		padding: 12px 18px;
 
@@ -91,7 +90,7 @@
 			0 1px 2px 0 rgba(10, 13, 18, 0.05),
 			inset 0 -2px 0 0 rgba(10, 13, 18, 0.05),
 			inset 0 0 0 1px rgba(10, 13, 18, 0.18);
-		background: var(--main);
+		background-color: #ff8533;
 	}
 
 	.bigText {
@@ -122,5 +121,29 @@
 		bottom: -80px;
 		left: 0;
 		text-align: left;
+	}
+}
+
+@media (max-width: 500px) {
+	.hero {
+		.title {
+			font-size: 32px;
+		}
+
+		.subtitle {
+			font-size: 16px;
+		}
+
+		.btnWrapper {
+			flex-direction: column;
+		}
+
+		.btnWhite,
+		.btnOrange {
+			width: 100%;
+			max-width: 340px;
+			justify-content: center;
+			margin-right: auto;
+		}
 	}
 }
