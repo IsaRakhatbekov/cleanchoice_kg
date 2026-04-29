@@ -1,3 +1,4 @@
+import Benefits from '../sections/Benefits/Benefits'
 import Header from '../sections/Header/Header'
 import Hero from '../sections/Hero/Hero'
 import Statistics from '../sections/Statistics/Statistics'
@@ -9,7 +10,7 @@ export default function Home() {
 			<main>
 				<Hero />
 				<Statistics />
-				{/* <Benefits /> */}
+				<Benefits />
 				{/* <AboutHeatPump /> */}
 				{/* <HeatPumpProcess /> */}
 				{/* <Types /> */}
