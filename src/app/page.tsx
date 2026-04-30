@@ -7,6 +7,7 @@ import Footer from '../sections/Footer/Footer'
 import Header from '../sections/Header/Header'
 import HeatPumpProcess from '../sections/HeatPumpProcess/HeatPumpProcess'
 import Hero from '../sections/Hero/Hero'
+import HowItWorks from '../sections/HowItWorks/HowItWorks'
 import Partners from '../sections/Partners/Partners'
 import Statistics from '../sections/Statistics/Statistics'
 import Types from '../sections/Types/Types'
@@ -23,6 +24,7 @@ export default function Home() {
 				<HeatPumpProcess />
 				<Types />
 				<Diagnostics />
+				<HowItWorks />
 				<Contractor />
 				<FAQ />
 				<Partners />

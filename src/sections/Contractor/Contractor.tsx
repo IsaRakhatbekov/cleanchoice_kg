@@ -11,6 +11,8 @@ type Country = {
 type ContractorItem = {
 	name: string
 	addresses: string[]
+	phones: string[]
+	emails: string[]
 	websites: string[]
 	countries: Country[]
 	priceFrom: string
@@ -20,6 +22,8 @@ const contractors: ContractorItem[] = [
 	{
 		name: '"ОсОО ""Компас" 220.kg',
 		addresses: ['г. Бишкек, ул. Т.Молдо,28/19'],
+		phones: ['0 (312) 615 050', '0 (550) 461 818'],
+		emails: ['ofic@220.kg'],
 		websites: ['www.220.kg/'],
 		countries: [{ flag: '🇨🇳', name: 'Китай' }],
 		priceFrom: '3400$',
@@ -27,6 +31,8 @@ const contractors: ContractorItem[] = [
 	{
 		name: 'ОсОО "Буудан" MBT Midea',
 		addresses: ['г. Бишкек, ул. Чингиза Айтматова 299/4 (ЖК "Фрунзе")'],
+		phones: ['0 (312) 880 965', '0 (552) 567 282'],
+		emails: ['buudan.kg@gmail.com', 'mideamarketkg@gmail.com'],
 		websites: ['https://midea.kg/'],
 		countries: [{ flag: '🇨🇳', name: 'Китай' }],
 		priceFrom: '3300$',
@@ -34,6 +40,8 @@ const contractors: ContractorItem[] = [
 	{
 		name: 'ОсОО«Нулевые Выбросы» Бренд "GEO"',
 		addresses: ['г. Бишкек,ул. Киевская 107'],
+		phones: ['0 (556) 708 679'],
+		emails: ['geo.energy.kg@gmail.com'],
 		websites: [],
 		countries: [{ flag: '🇨🇳', name: 'Китай' }],
 		priceFrom: '3500$',
@@ -41,6 +49,8 @@ const contractors: ContractorItem[] = [
 	{
 		name: 'ОсОО "ИНОА" Бренд "ProHeat"',
 		addresses: ['г. Бишкек, ул. Ауэзова 98/5'],
+		phones: ['0 (709) 969 709', '0 (706) 646 424'],
+		emails: ['info@inoa.kg'],
 		websites: ['https://inoa.kg/'],
 		countries: [{ flag: '🇨🇳', name: 'Китай' }],
 		priceFrom: '2200$',
@@ -48,6 +58,8 @@ const contractors: ContractorItem[] = [
 	{
 		name: 'ОсОО "Тепло в дом" Бренд "EST Group"',
 		addresses: ['г. Бишкек, ул. Ахунбаева 2/6а'],
+		phones: ['0 (555) 150 612', '0 (553) 523 003'],
+		emails: ['Est.shiv@gmail.com'],
 		websites: ['www.instagram.com/estgroupkg/'],
 		countries: [{ flag: '🇨🇳', name: 'Китай' }],
 		priceFrom: '3200$',
@@ -57,6 +69,8 @@ const contractors: ContractorItem[] = [
 		addresses: [
 			'г. Бишкек, ж/м Кок-Жар ул. Мадиева 23/1 бизнес центр ДНТ), 2 этаж кабинет 6',
 		],
+		phones: ['0 (755) 262 565', '0 (708) 779 291'],
+		emails: ['officeheatpro@gmail.com'],
 		websites: ['www.instagram.com/heatpro.kg/'],
 		countries: [{ flag: '🇨🇳', name: 'Китай' }],
 		priceFrom: '3500$',
@@ -64,6 +78,8 @@ const contractors: ContractorItem[] = [
 	{
 		name: 'ОсОО "Нурсан Энерджи"',
 		addresses: ['г. Бишкек, бульвар Эркиндик 31А'],
+		phones: ['0 (312) 665 466', '0 (706) 697 007', '0 (550) 697 007', '0 (703) 069 300'],
+		emails: ['nursunenergy@gmail.com'],
 		websites: ['http://nursunenergy.com/'],
 		countries: [{ flag: '🇨🇳', name: 'Китай' }],
 		priceFrom: '3000$',
@@ -71,6 +87,8 @@ const contractors: ContractorItem[] = [
 	{
 		name: 'ОсОО « Эрекен Групп» Бренд "KAZEKO"',
 		addresses: ['г. Бишкек, ул. Элебаева 44'],
+		phones: ['0 (704) 776 688', '0 (501) 777 888'],
+		emails: ['sales@kazeco.kg'],
 		websites: ['www.kazeco.kg/'],
 		countries: [{ flag: '🇨🇳', name: 'Китай' }],
 		priceFrom: '4500$',
@@ -78,6 +96,8 @@ const contractors: ContractorItem[] = [
 	{
 		name: 'ОсОО«Зеленый горизонт» Бренд "Термоклимат"',
 		addresses: ['г. Бишкек, ТК Табылга (Б-25)'],
+		phones: ['0 (554) 223 648', '0 (555) 660 276'],
+		emails: ['greenhorizonkg@gmail.com'],
 		websites: ['https://termoclimat.kg/'],
 		countries: [{ flag: '🇨🇳', name: 'Китай' }],
 		priceFrom: '4000$',
@@ -85,6 +105,8 @@ const contractors: ContractorItem[] = [
 	{
 		name: 'ОсОО "Таза Аллианс" Бренд "Regulus"',
 		addresses: ['г. Бишкек, ул. Анкара д.6'],
+		phones: ['0 (555) 788 013'],
+		emails: ['taza.engineer@gmail.com'],
 		websites: [],
 		countries: [{ flag: '🇨🇳', name: 'Китай' }],
 		priceFrom: '00$',
@@ -92,6 +114,8 @@ const contractors: ContractorItem[] = [
 	{
 		name: 'ИП "АМК Фасад" Бренд "Ecotech Power',
 		addresses: ['г. Бишкек,ул. Анарбека Бакаева 22/1'],
+		phones: ['0 (703) 404 420', '0 (554) 006 006', '0 (504) 006 006'],
+		emails: ['ecotechpower17@gmail.com'],
 		websites: ['https://www.instagram.com/ecotech_power'],
 		countries: [{ flag: '🇨🇳', name: 'Китай' }],
 		priceFrom: '2500$',
@@ -99,6 +123,8 @@ const contractors: ContractorItem[] = [
 	{
 		name: 'ОсОО "Ала-Тоо Инжениринг"',
 		addresses: ['г. Бищкек, ул. Панфилова 94'],
+		phones: ['0 (502) 440 444', '0 (221) 440 444'],
+		emails: ['alatokg@gmail.com'],
 		websites: ['www.alato.kg/'],
 		countries: [{ flag: '🇨🇳', name: 'Китай' }],
 		priceFrom: '2200$',
@@ -108,11 +134,25 @@ const contractors: ContractorItem[] = [
 		addresses: [
 			'г. Каракол, ул. Кутманалиева 124г. Бишкек,ул. 7 Апреля 94, офис 205',
 		],
-		websites: ['www.enviro.kg '],
+		phones: ['0 (552) 410 601', '0 (700) 575 007'],
+		emails: ['info@enviro.kg'],
+		websites: [
+			'www.enviro.kg',
+			'https://www.instagram.com/enviro.kg?igsh=dXZqZW0yaDQ1bHk1',
+		],
 		countries: [{ flag: '🇨🇳', name: 'Китай' }],
 		priceFrom: '2750$',
 	},
 ]
+
+const getWebsiteHref = (website: string) => {
+	if (website.startsWith('http://') || website.startsWith('https://')) {
+		return website
+	}
+	return `https://${website}`
+}
+
+const getPhoneHref = (phone: string) => `tel:${phone.replace(/[^\d+]/g, '')}`
 
 const LocationIcon = () => (
 	<svg viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -253,7 +293,9 @@ const Contractor = () => {
 							{contractor.websites.map(website => (
 								<a
 									className={styles.links}
-									href='#'
+									href={getWebsiteHref(website)}
+									target='_blank'
+									rel='noopener noreferrer'
 									key={`${contractor.name}-${website}`}
 								>
 									<span className={styles.linksIcon}>
@@ -282,13 +324,16 @@ const Contractor = () => {
 							</div>
 
 							<div className={styles.btnWrapper}>
-								<a href='#' className={styles.btmPhone}>
+								<a
+									href={getPhoneHref(contractor.phones[0])}
+									className={styles.btmPhone}
+								>
 									<span className={styles.btnIcon}>
 										<PhoneIcon />
 									</span>
 									Телефон
 								</a>
-								<a href='#' className={styles.btnEmail}>
+								<a href={`mailto:${contractor.emails[0]}`} className={styles.btnEmail}>
 									<span className={styles.btnIcon}>
 										<MailIcon />
 									</span>
