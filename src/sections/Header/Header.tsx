@@ -6,6 +6,7 @@ import styles from './Header.module.scss'
 
 const Header = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
+	const [isScrolled, setIsScrolled] = useState(false)
 
 	const handleMenuToggle = () => {
 		setIsMenuOpen((prev) => !prev)
@@ -28,8 +29,23 @@ const Header = () => {
 		}
 	}, [isMenuOpen])
 
+	useEffect(() => {
+		const handleScroll = () => {
+			setIsScrolled(window.scrollY > 10)
+		}
+
+		handleScroll()
+		window.addEventListener('scroll', handleScroll, { passive: true })
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll)
+		}
+	}, [])
+
 	return (
-		<header className={styles.Header}>
+		<header
+			className={`${styles.Header} ${isScrolled ? styles.HeaderScrolled : ''}`}
+		>
 			<div className={`${styles.container} container`}>
 				<nav className={styles.nav}>
 					<a className={styles.logo} href='/'>

@@ -11,7 +11,6 @@
 
 	.title {
 		flex-shrink: 0;
-
 		font-family: var(--font-family);
 		font-weight: 600;
 		font-size: 36px;
@@ -37,6 +36,26 @@
 		gap: 30px;
 	}
 
+	.item {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.item:nth-child(2),
+	.item:nth-child(4) {
+		.imgWrapper {
+			order: 3;
+		}
+
+		.innerTitle {
+			order: 1;
+		}
+
+		.text {
+			order: 2;
+		}
+	}
+
 	.innerTitle {
 		font-family: var(--font-family);
 		font-weight: 600;
@@ -52,5 +71,32 @@
 		font-size: 14px;
 		line-height: 143%;
 		color: #000;
+	}
+}
+
+@media (max-width: 991px) {
+	.AboutHeatPump {
+		.top {
+			flex-direction: column;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.AboutHeatPump {
+		.list {
+			gap: 20px;
+		}
+
+		.item {
+			max-width: 340px;
+			margin: 0 auto;
+			text-align: center;
+
+			&:nth-child(2),
+			&:nth-child(4) {
+				flex-direction: column-reverse;
+			}
+		}
 	}
 }

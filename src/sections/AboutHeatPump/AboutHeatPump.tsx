@@ -29,14 +29,14 @@ const AboutHeatPump = () => {
 						</p>
 					</li>
 					<li className={styles.item}>
+						<div className={styles.imgWrapper}>
+							<Image src={AboutHeatPump2} alt='#' width={300} height={179} />
+						</div>
 						<h3 className={styles.innerTitle}>Бесплатное тепло вокруг вас</h3>
 						<p className={styles.text}>
 							Берёт энергию из воздуха, грунта или воды — бесплатные источники
 							тепла
 						</p>
-						<div className={styles.imgWrapper}>
-							<Image src={AboutHeatPump2} alt='#' width={300} height={179} />
-						</div>
 					</li>
 					<li className={styles.item}>
 						<div className={styles.imgWrapper}>
@@ -48,14 +48,14 @@ const AboutHeatPump = () => {
 						</p>
 					</li>
 					<li className={styles.item}>
+						<div className={styles.imgWrapper}>
+							<Image src={AboutHeatPump4} alt='#' width={300} height={197} />
+						</div>
 						<h3 className={styles.innerTitle}>Включил и забыл</h3>
 						<p className={styles.text}>
 							Работает автоматически — без ручного контроля и обслуживания
 							топлива
 						</p>
-						<div className={styles.imgWrapper}>
-							<Image src={AboutHeatPump4} alt='#' width={300} height={197} />
-						</div>
 					</li>
 				</ul>
 			</div>
