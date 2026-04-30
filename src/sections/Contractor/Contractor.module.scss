@@ -281,3 +281,24 @@
 		}
 	}
 }
+
+@media (max-width: 991px) {
+	.Contractor {
+		padding: 60px 0;
+		.collaboration {
+			flex-direction: column;
+			gap: 30px;
+			text-align: center;
+			align-items: center;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.Contractor {
+		padding: 30px 0;
+		.collaboration {
+			padding: 30px;
+		}
+	}
+}

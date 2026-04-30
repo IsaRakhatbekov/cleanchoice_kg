@@ -120,8 +120,11 @@
 		line-height: 150%;
 		color: var(--belvy);
 	}
+}
 
-	@media (max-width: 991px) {
+@media (max-width: 991px) {
+	.HeatPumpProcess {
+		padding: 60px 0;
 		.list {
 			grid-template-columns: 1fr;
 			grid-template-rows: auto;
@@ -149,5 +152,11 @@
 				order: 4;
 			}
 		}
+	}
+}
+
+@media (max-width: 768px) {
+	.HeatPumpProcess {
+		padding: 30px 0;
 	}
 }

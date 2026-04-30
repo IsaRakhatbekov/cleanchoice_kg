@@ -124,9 +124,11 @@
 		line-height: 156%;
 		color: #000;
 	}
+}
 
-	@media (max-width: 1260px) {
-		padding: 110px 0;
+@media (max-width: 1260px) {
+	.Benefits {
+		padding: 100px 0;
 
 		.wrapper {
 			gap: 24px;
@@ -142,8 +144,10 @@
 			flex: 1 0 0;
 		}
 	}
+}
 
-	@media (max-width: 991px) {
+@media (max-width: 991px) {
+	.Benefits {
 		.wrapper {
 			flex-direction: column;
 		}
@@ -156,8 +160,10 @@
 			font-size: 18px;
 		}
 	}
+}
 
-	@media (max-width: 768px) {
+@media (max-width: 768px) {
+	.Benefits {
 		padding: 90px 0;
 
 		.list {
