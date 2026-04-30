@@ -395,7 +395,7 @@ const Diagnostics = () => {
 	}, [isModalOpen])
 
 	return (
-		<div className={styles.Diagnostics}>
+		<div className={styles.Diagnostics} id='diagnostics-section'>
 			<div className={`${styles.container} container`}>
 				<h2 className={styles.mobileTitle}>Подходит ли это решение вам?</h2>
 				<div className={styles.mobileImageWrap}>

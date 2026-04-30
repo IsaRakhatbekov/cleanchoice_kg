@@ -60,6 +60,7 @@
 		align-items: center;
 		gap: 5px;
 		flex-shrink: 1;
+		text-decoration: none;
 		padding: 12px 20px;
 		border: 1px solid #d5d7da;
 		border-radius: 8px;
@@ -78,11 +79,15 @@
 	}
 
 	.btnOrange {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		font-family: var(--font-family);
 		font-weight: 600;
 		font-size: 16px;
 		line-height: 150%;
 		color: #000;
+		text-decoration: none;
 		border-radius: 8px;
 		padding: 12px 18px;
 

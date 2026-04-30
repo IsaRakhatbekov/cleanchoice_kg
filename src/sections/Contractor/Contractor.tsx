@@ -78,7 +78,12 @@ const contractors: ContractorItem[] = [
 	{
 		name: 'ОсОО "Нурсан Энерджи"',
 		addresses: ['г. Бишкек, бульвар Эркиндик 31А'],
-		phones: ['0 (312) 665 466', '0 (706) 697 007', '0 (550) 697 007', '0 (703) 069 300'],
+		phones: [
+			'0 (312) 665 466',
+			'0 (706) 697 007',
+			'0 (550) 697 007',
+			'0 (703) 069 300',
+		],
 		emails: ['nursunenergy@gmail.com'],
 		websites: ['http://nursunenergy.com/'],
 		countries: [{ flag: '🇨🇳', name: 'Китай' }],
@@ -153,6 +158,12 @@ const getWebsiteHref = (website: string) => {
 }
 
 const getPhoneHref = (phone: string) => `tel:${phone.replace(/[^\d+]/g, '')}`
+const getGmailComposeHref = (email: string) =>
+	`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`
+const collaborationEmail = 'mavlyanov@yandex.com'
+const collaborationSubject = 'Сотрудничество по тепловым насосам'
+const collaborationGmailHref = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(collaborationEmail)}&su=${encodeURIComponent(collaborationSubject)}`
+const collaborationMailtoHref = `mailto:${collaborationEmail}?subject=${encodeURIComponent(collaborationSubject)}`
 
 const LocationIcon = () => (
 	<svg viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -333,7 +344,30 @@ const Contractor = () => {
 									</span>
 									Телефон
 								</a>
-								<a href={`mailto:${contractor.emails[0]}`} className={styles.btnEmail}>
+								<a
+									href={getGmailComposeHref(contractor.emails[0])}
+									className={styles.btnEmail}
+									onClick={event => {
+										const email = contractor.emails[0]
+										const gmailHref = getGmailComposeHref(email)
+										const mailtoHref = `mailto:${email}`
+										const openedWindow = window.open(
+											gmailHref,
+											'_blank',
+											'noopener,noreferrer',
+										)
+
+										if (openedWindow) {
+											event.preventDefault()
+											return
+										}
+
+										window.location.href = mailtoHref
+										event.preventDefault()
+									}}
+									rel='noopener noreferrer'
+									target='_blank'
+								>
 									<span className={styles.btnIcon}>
 										<MailIcon />
 									</span>
@@ -365,12 +399,25 @@ const Contractor = () => {
 						<p className={styles.collaborationText}>
 							Если вы представляете компанию, предлагающую тепловые насосы или
 							сопутствующие услуги, приглашаем к сотрудничеству — свяжитесь с
-							нами по электронной почте: <span>mavlyanov@yandex.com</span>
+							нами по электронной почте: <span>{collaborationEmail}</span>
 						</p>
 					</div>
 					<a
+						aria-label={`Написать на почту ${collaborationEmail}`}
 						className={styles.collaborationEmailBtn}
-						href='mailto:mavlyanov@yandex.com'
+						href={collaborationGmailHref}
+						onClick={event => {
+							if (typeof window === 'undefined') return
+							const openedWindow = window.open(collaborationGmailHref, '_blank', 'noopener,noreferrer')
+							if (openedWindow) {
+								event.preventDefault()
+								return
+							}
+							window.location.href = collaborationMailtoHref
+							event.preventDefault()
+						}}
+						rel='noopener noreferrer'
+						target='_blank'
 					>
 						<span className={styles.btnIcon}>
 							<MailIcon color='white' />

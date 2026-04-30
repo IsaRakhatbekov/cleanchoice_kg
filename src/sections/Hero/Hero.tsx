@@ -13,7 +13,7 @@ const Hero = () => {
 						Разберитесь за 3 минуты, подходит ли это вашему дому.
 					</p>
 					<div className={styles.btnWrapper}>
-						<button className={styles.btnWhite}>
+						<a className={styles.btnWhite} href='#how-it-works-section'>
 							<span className={styles.whitBtnIcon}>
 								<svg
 									viewBox='0 0 19 19'
@@ -37,8 +37,10 @@ const Hero = () => {
 								</svg>
 							</span>
 							Как это работает
-						</button>
-						<button className={styles.btnOrange}>Подобрать решение</button>
+						</a>
+						<a className={styles.btnOrange} href='#diagnostics-section'>
+							Подобрать решение
+						</a>
 					</div>
 				</div>
 

@@ -57,7 +57,7 @@ const HowItWorks = () => {
 	const [activeVideoId, setActiveVideoId] = useState<string | null>(null)
 
 	return (
-		<div className={styles.HowItWorks}>
+		<div className={styles.HowItWorks} id='how-it-works-section'>
 			<div className={`${styles.container} container`}>
 				<h2 className={styles.title}>Посмотрите, как это работает в жизни</h2>
 				<h3 className={styles.subtitle}>
