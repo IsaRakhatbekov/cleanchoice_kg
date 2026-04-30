@@ -102,7 +102,7 @@ const checkIcon = (
 
 const Types = () => {
 	return (
-		<div className={styles.Types}>
+		<div className={styles.Types} id='types-section'>
 			<div className={`${styles.container} container`}>
 				<h2 className={styles.title}>Виды тепловых насосов </h2>
 				<ul className={styles.list}>

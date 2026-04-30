@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { type MouseEvent, useEffect, useState } from 'react'
 
 import styles from './Header.module.scss'
 
@@ -9,11 +9,34 @@ const Header = () => {
 	const [isScrolled, setIsScrolled] = useState(false)
 
 	const handleMenuToggle = () => {
-		setIsMenuOpen((prev) => !prev)
+		setIsMenuOpen(prev => !prev)
 	}
 
 	const handleMenuClose = () => {
 		setIsMenuOpen(false)
+	}
+
+	const handleNavLinkClick = (
+		event: MouseEvent<HTMLAnchorElement>,
+		targetId: string,
+	) => {
+		event.preventDefault()
+		handleMenuClose()
+
+		const targetElement = document.getElementById(targetId)
+		if (!targetElement) return
+
+		window.requestAnimationFrame(() => {
+			const header = document.querySelector('header')
+			const headerOffset = header instanceof HTMLElement ? header.offsetHeight : 0
+			const targetPosition =
+				targetElement.getBoundingClientRect().top + window.scrollY - headerOffset
+
+			window.scrollTo({
+				top: Math.max(targetPosition, 0),
+				behavior: 'smooth',
+			})
+		})
 	}
 
 	useEffect(() => {
@@ -68,32 +91,64 @@ const Header = () => {
 						className={`${styles.list} ${isMenuOpen ? styles.listOpen : ''}`}
 					>
 						<li className={styles.item}>
-							<a className={styles.link} href='#' onClick={handleMenuClose}>
+							<a
+								className={styles.link}
+								href='#how-it-works-section'
+								onClick={event =>
+									handleNavLinkClick(event, 'how-it-works-section')
+								}
+							>
 								Как это работает
 							</a>
 						</li>
 						<li className={styles.item}>
-							<a className={styles.link} href='#' onClick={handleMenuClose}>
+							<a
+								className={styles.link}
+								href='#heat-pump-process-section'
+								onClick={event =>
+									handleNavLinkClick(event, 'heat-pump-process-section')
+								}
+							>
 								Преимущества
 							</a>
 						</li>
 						<li className={styles.item}>
-							<a className={styles.link} href='#' onClick={handleMenuClose}>
+							<a
+								className={styles.link}
+								href='#diagnostics-section'
+								onClick={event =>
+									handleNavLinkClick(event, 'diagnostics-section')
+								}
+							>
 								Подходит ли вам
 							</a>
 						</li>
 						<li className={styles.item}>
-							<a className={styles.link} href='#' onClick={handleMenuClose}>
+							<a
+								className={styles.link}
+								href='#types-section'
+								onClick={event => handleNavLinkClick(event, 'types-section')}
+							>
 								Виды насосов
 							</a>
 						</li>
 						<li className={styles.item}>
-							<a className={styles.link} href='#' onClick={handleMenuClose}>
+							<a
+								className={styles.link}
+								href='#contractor-section'
+								onClick={event =>
+									handleNavLinkClick(event, 'contractor-section')
+								}
+							>
 								Подрядчики
 							</a>
 						</li>
 						<li className={styles.item}>
-							<a className={styles.link} href='#' onClick={handleMenuClose}>
+							<a
+								className={styles.link}
+								href='#faq-section'
+								onClick={event => handleNavLinkClick(event, 'faq-section')}
+							>
 								FAQ
 							</a>
 						</li>

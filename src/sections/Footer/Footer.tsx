@@ -98,16 +98,16 @@ const Footer = () => {
 							<h4 className={styles.innerTitle}>Новигация</h4>
 						</li>
 						<li className={styles.item}>
-							<a href='#'>Что такое тепловой насос</a>
+							<a href='#about-heat-pump-section'>Что такое тепловой насос</a>
 						</li>
 						<li className={styles.item}>
-							<a href='#'>Как это работает</a>
+							<a href='#how-it-works-section'>Как это работает</a>
 						</li>
 						<li className={styles.item}>
-							<a href='#'>Виды тепловых насосов</a>
+							<a href='#types-section'>Виды тепловых насосов</a>
 						</li>
 						<li className={styles.item}>
-							<a href='#'>Найти подрядчика</a>
+							<a href='#contractor-section'>Найти подрядчика</a>
 						</li>
 					</ul>
 					<div className={styles.socialWrapper}>

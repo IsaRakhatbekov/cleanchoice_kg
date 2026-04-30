@@ -2,7 +2,7 @@ import styles from './HeatPumpProcess.module.scss'
 
 const HeatPumpProcess = () => {
 	return (
-		<section className={styles.HeatPumpProcess}>
+		<section className={styles.HeatPumpProcess} id='heat-pump-process-section'>
 			<div className={`${styles.container} container`}>
 				<h2 className={styles.title}>Как тепловой насос обогревает дом</h2>
 				<p className={styles.subtitle}>

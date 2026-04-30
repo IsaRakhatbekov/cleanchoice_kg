@@ -8,7 +8,7 @@ import AboutHeatPump4 from '@/public/AboutHeatPump4.png'
 
 const AboutHeatPump = () => {
 	return (
-		<section className={styles.AboutHeatPump}>
+		<section className={styles.AboutHeatPump} id='about-heat-pump-section'>
 			<div className={`${styles.container} container`}>
 				<div className={styles.top}>
 					<h2 className={styles.title}>Что такое тепловой насос</h2>

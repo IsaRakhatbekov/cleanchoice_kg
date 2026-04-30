@@ -105,9 +105,9 @@ const DiagnosticsModal = ({
 										<path
 											d='M9.33395 3.5L14.0006 12.8333L19.8339 6.99998L25.6672 24.4999H2.33398L9.33395 3.5Z'
 											stroke='#F54900'
-											stroke-width='2.33332'
-											stroke-linecap='round'
-											stroke-linejoin='round'
+											strokeWidth='2.33332'
+											strokeLinecap='round'
+											strokeLinejoin='round'
 										/>
 									</svg>
 								</span>
@@ -131,16 +131,16 @@ const DiagnosticsModal = ({
 												<path
 													d='M9.99935 18.3332C14.6017 18.3332 18.3327 14.6022 18.3327 9.99984C18.3327 5.39746 14.6017 1.6665 9.99935 1.6665C5.39698 1.6665 1.66602 5.39746 1.66602 9.99984C1.66602 14.6022 5.39698 18.3332 9.99935 18.3332Z'
 													stroke='#00BC7D'
-													stroke-width='1.66667'
-													stroke-linecap='round'
-													stroke-linejoin='round'
+													strokeWidth='1.66667'
+													strokeLinecap='round'
+													strokeLinejoin='round'
 												/>
 												<path
 													d='M7.5 10.0002L9.16667 11.6668L12.5 8.3335'
 													stroke='#00BC7D'
-													stroke-width='1.66667'
-													stroke-linecap='round'
-													stroke-linejoin='round'
+													strokeWidth='1.66667'
+													strokeLinecap='round'
+													strokeLinejoin='round'
 												/>
 											</svg>
 										</span>{' '}

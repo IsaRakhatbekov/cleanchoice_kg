@@ -23,6 +23,10 @@ body {
 	background-color: inherit;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 .container {
 	max-width: 1255px;
 	margin: 0 auto;

@@ -120,9 +120,8 @@
 
 	.playWrapper {
 		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		inset: 0;
+		margin: auto;
 		border-radius: 100%;
 		width: 65px;
 		height: 65px;
@@ -135,6 +134,13 @@
 		border: none;
 		padding: 0;
 		z-index: 2;
+	}
+
+	.playSvg {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transform: translateX(1px);
 	}
 
 	.videoModal {
