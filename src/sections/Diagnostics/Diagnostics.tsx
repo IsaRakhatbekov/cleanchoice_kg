@@ -14,9 +14,14 @@ import {
 type DiagnosticsModalProps = {
 	isOpen: boolean
 	onClose: () => void
+	onSelectContractor: () => void
 }
 
-const DiagnosticsModal = ({ isOpen, onClose }: DiagnosticsModalProps) => {
+const DiagnosticsModal = ({
+	isOpen,
+	onClose,
+	onSelectContractor,
+}: DiagnosticsModalProps) => {
 	const [isQuizStarted, setIsQuizStarted] = useState(false)
 	const [currentStep, setCurrentStep] = useState(0)
 	const [answers, setAnswers] = useState<Record<string, string>>({})
@@ -89,7 +94,23 @@ const DiagnosticsModal = ({ isOpen, onClose }: DiagnosticsModalProps) => {
 								Исходя из ваших ответов вам подойдёт система:
 							</p>
 							<div className={styles.resultType}>
-								<span className={styles.resultIcon}>△</span>
+								<span className={styles.resultIcon}>
+									<svg
+										width='28'
+										height='28'
+										viewBox='0 0 28 28'
+										fill='none'
+										xmlns='http://www.w3.org/2000/svg'
+									>
+										<path
+											d='M9.33395 3.5L14.0006 12.8333L19.8339 6.99998L25.6672 24.4999H2.33398L9.33395 3.5Z'
+											stroke='#F54900'
+											stroke-width='2.33332'
+											stroke-linecap='round'
+											stroke-linejoin='round'
+										/>
+									</svg>
+								</span>
 								<strong>{quizResults[result].title}</strong>
 							</div>
 							<p className={styles.resultReasonsTitle}>
@@ -97,10 +118,41 @@ const DiagnosticsModal = ({ isOpen, onClose }: DiagnosticsModalProps) => {
 							</p>
 							<ul className={styles.resultReasons}>
 								{quizResults[result].reasons.map(reason => (
-									<li key={reason}>{reason}</li>
+									<li key={reason}>
+										{' '}
+										<span>
+											<svg
+												width='20'
+												height='20'
+												viewBox='0 0 20 20'
+												fill='none'
+												xmlns='http://www.w3.org/2000/svg'
+											>
+												<path
+													d='M9.99935 18.3332C14.6017 18.3332 18.3327 14.6022 18.3327 9.99984C18.3327 5.39746 14.6017 1.6665 9.99935 1.6665C5.39698 1.6665 1.66602 5.39746 1.66602 9.99984C1.66602 14.6022 5.39698 18.3332 9.99935 18.3332Z'
+													stroke='#00BC7D'
+													stroke-width='1.66667'
+													stroke-linecap='round'
+													stroke-linejoin='round'
+												/>
+												<path
+													d='M7.5 10.0002L9.16667 11.6668L12.5 8.3335'
+													stroke='#00BC7D'
+													stroke-width='1.66667'
+													stroke-linecap='round'
+													stroke-linejoin='round'
+												/>
+											</svg>
+										</span>{' '}
+										{reason}
+									</li>
 								))}
 							</ul>
-							<button className={styles.resultActionButton} type='button'>
+							<button
+								className={styles.resultActionButton}
+								onClick={onSelectContractor}
+								type='button'
+							>
 								Выбрать подрядчика
 							</button>
 						</div>
@@ -197,8 +249,20 @@ const slidersIcon = (
 		fill='none'
 		xmlns='http://www.w3.org/2000/svg'
 	>
-		<path d='M20 7H11' stroke='#6FB400' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
-		<path d='M14 17H5' stroke='#6FB400' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
+		<path
+			d='M20 7H11'
+			stroke='#6FB400'
+			strokeWidth='1.5'
+			strokeLinecap='round'
+			strokeLinejoin='round'
+		/>
+		<path
+			d='M14 17H5'
+			stroke='#6FB400'
+			strokeWidth='1.5'
+			strokeLinecap='round'
+			strokeLinejoin='round'
+		/>
 		<path
 			d='M17 20C18.6569 20 20 18.6569 20 17C20 15.3431 18.6569 14 17 14C15.3431 14 14 15.3431 14 17C14 18.6569 15.3431 20 17 20Z'
 			stroke='#6FB400'
@@ -231,8 +295,20 @@ const bulbIcon = (
 			strokeLinecap='round'
 			strokeLinejoin='round'
 		/>
-		<path d='M9 18H15' stroke='#6FB400' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
-		<path d='M10 22H14' stroke='#6FB400' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
+		<path
+			d='M9 18H15'
+			stroke='#6FB400'
+			strokeWidth='1.5'
+			strokeLinecap='round'
+			strokeLinejoin='round'
+		/>
+		<path
+			d='M10 22H14'
+			stroke='#6FB400'
+			strokeWidth='1.5'
+			strokeLinecap='round'
+			strokeLinejoin='round'
+		/>
 	</svg>
 )
 
@@ -276,13 +352,36 @@ const piggyBankIcon = (
 			strokeLinecap='round'
 			strokeLinejoin='round'
 		/>
-		<path d='M2 9V10C2 11.1 2.9 12 4 12H5' stroke='#6FB400' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
-		<path d='M16 11H16.01' stroke='#6FB400' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
+		<path
+			d='M2 9V10C2 11.1 2.9 12 4 12H5'
+			stroke='#6FB400'
+			strokeWidth='1.5'
+			strokeLinecap='round'
+			strokeLinejoin='round'
+		/>
+		<path
+			d='M16 11H16.01'
+			stroke='#6FB400'
+			strokeWidth='1.5'
+			strokeLinecap='round'
+			strokeLinejoin='round'
+		/>
 	</svg>
 )
 
 const Diagnostics = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
+
+	const handleSelectContractor = () => {
+		setIsModalOpen(false)
+		window.requestAnimationFrame(() => {
+			window.requestAnimationFrame(() => {
+				document
+					.getElementById('contractor-section')
+					?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+			})
+		})
+	}
 
 	useEffect(() => {
 		if (!isModalOpen) return
@@ -361,6 +460,7 @@ const Diagnostics = () => {
 			<DiagnosticsModal
 				isOpen={isModalOpen}
 				onClose={() => setIsModalOpen(false)}
+				onSelectContractor={handleSelectContractor}
 			/>
 		</div>
 	)

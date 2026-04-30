@@ -255,7 +255,7 @@ const Contractor = () => {
 	)
 
 	return (
-		<div className={styles.Contractor}>
+		<div className={styles.Contractor} id='contractor-section'>
 			<div className={`${styles.container} container`}>
 				<h2 className={styles.title}>
 					Найдите подрядчика для консультации и установки
